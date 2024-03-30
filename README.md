@@ -81,3 +81,9 @@ pnpm build.server
 ```shell
 pnpm build.server
 ```
+
+## Static Site Generator (Node.js)
+
+```shell
+pnpm build.server
+```

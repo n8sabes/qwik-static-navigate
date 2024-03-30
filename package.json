@@ -29,19 +29,19 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.5.1",
-    "@builder.io/qwik-city": "^1.5.1",
+    "@builder.io/qwik": "github:builderio/qwik-build",
+    "@builder.io/qwik-city": "github:builderio/qwik-city-build",
     "@types/eslint": "^8.56.6",
-    "@types/node": "^20.11.30",
-    "@typescript-eslint/eslint-plugin": "^7.3.1",
-    "@typescript-eslint/parser": "^7.3.1",
+    "@types/node": "^20.12.2",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-qwik": "1.5.1-dev20240320154426",
+    "eslint-plugin-qwik": "1.5.1",
     "prettier": "^3.2.5",
     "serve": "^14.2.1",
-    "typescript": "5.3.3",
-    "undici": "*",
-    "vite": "^5.1.6",
-    "vite-tsconfig-paths": "^4.2.1"
+    "typescript": "5.4.3",
+    "undici": "^6.10.2",
+    "vite": "^5.2.7",
+    "vite-tsconfig-paths": "^4.3.2"
   }
 }
