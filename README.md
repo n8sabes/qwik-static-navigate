@@ -25,6 +25,8 @@ FILE: `./static/adapters/static/`
 
 ### Error
 
+This test fails the build: [HERE](https://github.com/BuilderIO/qwik/blob/fd2ccbd641c12afce90ec45696c9d598cd4a34d7/packages/qwik-city/static/main-thread.ts#L239)
+
 ```log
 error during build:
 Error: "origin" must start with a valid protocol, such as "https://" or "http://", received "null"
