@@ -12,7 +12,15 @@ export default extendConfig(baseConfig, () => {
     },
     plugins: [
       staticAdapter({
-        origin: "https://yoursite.qwik.dev",
+        //
+        // Works
+        //
+        // origin: "http://localhost:4000",
+
+        //
+        // Broken
+        //
+        origin: "capacitor://localhost",
       }),
     ],
   };

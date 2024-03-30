@@ -1,14 +1,19 @@
-import { $, component$, useSignal, useTask$ } from "@builder.io/qwik";
+import { component$, useSignal, useTask$ } from "@builder.io/qwik";
 import { useNavigate, type DocumentHead } from "@builder.io/qwik-city";
 
 export default component$(() => {
   const originInputSignal = useSignal("capacitor://localhost");
   const originOutputSignal = useSignal("");
   const navigate = useNavigate();
-  navigate;
 
-  const processOrigin = $((origin: string) => {
-    let ssgOrigin = origin;
+  // const processOrigin = $((origin: string) => {
+  // });
+
+  useTask$(async ({ track }) => {
+    track(() => originInputSignal.value);
+    // originOutputSignal.value = await processOrigin(originInputSignal.value);
+
+    let ssgOrigin = originInputSignal.value;
 
     if (!ssgOrigin) {
       console.log("1");
@@ -23,12 +28,7 @@ export default component$(() => {
       console.log("3");
       ssgOrigin = `https:${ssgOrigin}`;
     }
-    return ssgOrigin;
-  });
-
-  useTask$(async ({ track }) => {
-    track(() => originInputSignal.value);
-    originOutputSignal.value = await processOrigin(originInputSignal.value);
+    originOutputSignal.value = ssgOrigin;
   });
 
   return (
